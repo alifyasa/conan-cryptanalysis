@@ -5,22 +5,36 @@ using namespace std;
 
 typedef long long ll;
 
-ll arr[26];
+ll arr[36];
+int convertHashFromChar(char c){
+    int temp = (int)c;
+    if(temp >= 65) return temp-65;
+    else return temp-22;
+}
+char convertHashFromInt(int n){
+    if(n < 26) return (char)(n+65);
+    else return (char)(n+22);
+}
 void solve(){
     freopen("../test/input/problem1.txt", "r", stdin);
     freopen("../test/output/problem1.txt", "w", stdout);
-    string s; cin >> s;
+    int count = 0;
+    string s; s = "";
+    string temp;
+    // Keep reading lines until an empty line is encountered
+    while (getline(cin, temp)&&!temp.empty()) {
+        s += temp;
+    }
     ll szS = s.length();
+
     // Do frequency count first for each character on string
     for(ll i = 0; i < szS; i++){
-        arr[s[i] - 64]++;
+        arr[convertHashFromChar(s[i])]++;
     }
-    // We can show the frequency count of each character
-    for(ll i = 1; i <= 26; i++){
-        cout << (char)(i + 64) << " " << arr[i] << "\n";
-    }
+    cout << s << "\n";
+
     // We can rank the frequency from the highest to the lowest with bigram and trigram list
-    
+
 
 }
  
