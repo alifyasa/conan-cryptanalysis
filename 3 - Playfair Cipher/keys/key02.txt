@@ -1,0 +1,14 @@
+_ _ _ _ _
+_ _ _ _ _
+A T H E L
+_ _ R M _
+_ _ _ _ _
+
+Explanation:
+
+I think it would be useful to find the last character in the '_THEL' row.
+There are two candidate: A and I. Why? Because ?T bigrams would be encrypted
+to TH with 0.96% frequency. Both AT and IT has high frequency.
+
+A is chosen because both IT and TI has high frequency, but in the ciphertext,
+TH has high frequency and HT has low frequency. That fits with AT and TA.

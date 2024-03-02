@@ -1,0 +1,17 @@
+A T H E L
+I Q _ _ _
+D _ _ _ _
+X N _ _ _
+_ _ R M _
+
+Explanation:
+
+After observing the partially decrypted plaintext, I saw this
+
+GIPVA HEREALRE IXDFR
+
+I think it is reasonable to guess IXD is ADY.
+
+I also think that QX is IN, using the same reasoning as key0 and key1.
+
+Like before, positioning still needs work.

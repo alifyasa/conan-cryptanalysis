@@ -1,0 +1,12 @@
+_ _ _ _ _
+_ _ _ _ _
+_ T H E L
+_ _ R M _
+_ _ _ _ _
+
+Explanation:
+
+HM and MH also has very high frequencies (1.42% and 1.45% respectively). 
+Because they are reversed, then the plaintext are also reversed. Hence, it is
+reasonable to guess that they are ER and RE. Needs more testing to determine
+the correct positioning.
