@@ -1,0 +1,18 @@
+A T H E L
+I _ _ Q _
+D _ _ _ _
+X _ W N _
+_ _ R M _
+
+Explanation:
+
+Like before, I observed the following
+
+TH HN EATHER
+
+The HN is not decrypted. After searching for english words that ends with 
+EATHER, I found LEATHER and WEATHER. I think the previous text has to be
+
+THE (F/W)EATHER.
+
+I'm sure it's W because L is at the same row as H.

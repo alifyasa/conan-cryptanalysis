@@ -1,0 +1,34 @@
+A T H E L
+I _ Y Q _
+_ _ K D O
+S V R M P
+X _ W N F
+
+Explanation:
+
+I found 
+
+BTHEYHADNTMETLPRSEVERALYEAR
+
+I think it's supposed to be
+
+THEY HADNT MET FOR SEVERAL YEAR
+
+So LP is FO, so either
+
+A T H E L
+I _ Y Q _
+_ _ K D O
+S V R M P
+X _ W N F
+
+or
+
+A T H E L
+I _ Y Q O
+_ _ K D P
+S V R M _
+X _ W N F
+
+But when I try the first one, the first few plaintext characters 
+are MR AND MRS. So I think the first one is correct.

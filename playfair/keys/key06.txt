@@ -1,0 +1,25 @@
+A T H E L
+I _ Y Q _
+_ _ K _ _
+S V R M _
+X _ W N _
+
+Explanation:
+
+I got stuck, so I shuffle some letters. What I noticed is that I think D is 
+wrong. There are just too many places that seems like D doesnt belong there.
+
+(After deleting D)
+A T H E L
+I _ Y Q _
+S V K _ _
+_ _ R M _
+X _ W N _
+
+Then there is 
+
+LPMVTM ERALYEAK XGFXTG
+
+I think it's supposed to be SEVERAL YEAR.
+
+This can be made by shifting S and V down.

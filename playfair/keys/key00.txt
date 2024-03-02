@@ -1,0 +1,10 @@
+_ _ _ _ _
+_ _ _ _ _
+_ T H E L
+_ _ _ _ _
+_ _ _ _ _
+
+Explanation:
+
+Frequency of HE is 2.96% and EL is 2.57%. Hence, there is a very high chance
+that they are TH and HE respectively.
