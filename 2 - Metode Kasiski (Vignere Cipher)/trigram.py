@@ -3,9 +3,9 @@ def get_all_repeated_trigram(ciphertext):
     for i, y in enumerate(ciphertext):
         next_trigram = ciphertext[i:i+3]
         if(next_trigram in trigram_pos.keys()):
-            trigram_pos[next_trigram] += [i]
+            trigram_pos[next_trigram] += [i+1]
         else:
-            trigram_pos[next_trigram] = [i]
+            trigram_pos[next_trigram] = [i+1]
     repeated_list = list(filter(lambda x: len(trigram_pos[x]) > 1, trigram_pos))
     ret_trigram_pos = [(trigram, trigram_pos[trigram]) for trigram in repeated_list]
     return ret_trigram_pos
