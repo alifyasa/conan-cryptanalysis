@@ -42,22 +42,28 @@ def main():
     image_path = "chall.jpg"
     hex_values = read_image_to_hex(image_path)
 
-    # Get first two bytes
-    fst_c_byte, snd_c_byte = hex_values[:2]
-    fst_c_byte, snd_c_byte = int(fst_c_byte, 16), int(snd_c_byte, 16)
+    command = input("Do you have the key? (Y/N): ")
+    if(command=='Y' or command=='y'):
+        m = int(input("Enter m: "))
+        b = int(input("Enter b: "))
+    else:
+        print("Oke, if you dont have the key, we assume encryption is get JPG image instead")
+        # Get first two bytes
+        fst_c_byte, snd_c_byte = hex_values[:2]
+        fst_c_byte, snd_c_byte = int(fst_c_byte, 16), int(snd_c_byte, 16)
 
-    # Known Plaintext from Magic Bytes
-    fst_p_byte, snd_p_byte = int('0xFF', 16), int('0xD8', 16)
+        # Known Plaintext from Magic Bytes
+        fst_p_byte, snd_p_byte = int('0xFF', 16), int('0xD8', 16)
 
-    # Assume formula of m * p + b % 256 = c
-    # then (m * p1 + b) - (m * p2 + b) % 256 = c1 - c2
-    # then m * (p1 - p2) % 256 = c1 - c2
-    # then m = (c1 - c2) * pow(p1 - p2, -1, 256)
-    m = (fst_c_byte - snd_c_byte) * pow(fst_p_byte - snd_p_byte, -1, modulus) % modulus
+        # Assume formula of m * p + b % 256 = c
+        # then (m * p1 + b) - (m * p2 + b) % 256 = c1 - c2
+        # then m * (p1 - p2) % 256 = c1 - c2
+        # then m = (c1 - c2) * pow(p1 - p2, -1, 256)
+        m = (fst_c_byte - snd_c_byte) * pow(fst_p_byte - snd_p_byte, -1, modulus) % modulus
 
-    # Assume formula of m * p + b % 256 = c, m known
-    # b = c - m * p % 256
-    b = (fst_c_byte - m * fst_p_byte) % modulus
+        # Assume formula of m * p + b % 256 = c, m known
+        # b = c - m * p % 256
+        b = (fst_c_byte - m * fst_p_byte) % modulus
 
     # Report
     print("================= REPORT =================")
@@ -73,7 +79,7 @@ def main():
     if hex_values is not None:
         cipher_hex = affine_decrypt(hex_values, m, b, modulus)
         bytearray_cipher = array_of_hex_to_bytearray(cipher_hex)
-        create_file_from_bytes("./flag/flag.jpg", bytearray_cipher)
+        create_file_from_bytes("flag.jpg", bytearray_cipher)
 
 if __name__ == "__main__":
     main()
